@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Carmel للتأمين</title>
 
 <style>
@@ -26,7 +25,7 @@ header {
   background: linear-gradient(135deg,#0f172a,#1e293b);
   color: white;
   text-align: center;
-  padding: 60px 20px;
+  padding: 70px 20px;
 }
 
 .hero h1 {
@@ -37,14 +36,22 @@ header {
   margin-bottom: 20px;
 }
 
-button {
-  background: #25d366;
-  border: none;
-  padding: 15px 25px;
-  color: white;
-  font-size: 16px;
+.buttons a {
+  display: inline-block;
+  margin: 8px;
+  padding: 14px 22px;
   border-radius: 10px;
-  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.whatsapp-btn {
+  background: #25d366;
+}
+
+.call-btn {
+  background: #2563eb;
 }
 
 .services {
@@ -56,35 +63,49 @@ button {
   padding: 15px;
   margin: 10px 0;
   border-radius: 10px;
-  font-size: 16px;
 }
 
-.whatsapp {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-  background: #25d366;
+.form {
+  padding: 20px;
+  background: #fff;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+input, select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.submit-btn {
+  background: #0f172a;
   color: white;
-  padding: 15px;
-  border-radius: 50%;
-  font-size: 20px;
-  text-decoration: none;
+  margin-top: 15px;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  border-radius: 8px;
 }
 </style>
-
 </head>
 
 <body>
 
 <header>
-Carmel للتأمين
+Carmel للتأمين | ביטוח Carmel
 </header>
 
 <section class="hero">
-<h1>خدمات التأمين و קופות גמל مع Carmel</h1>
+<h1>خدمات التأمين و קופות גמל</h1>
 <p>استشارة مهنية بالعربي لمساعدتك تختار الأفضل حسب وضعك وعمرك</p>
 
-<button onclick="goWhats()">تواصل واتساب</button>
+<div class="buttons">
+<a class="whatsapp-btn" href="https://wa.me/972533785331">واتساب</a>
+<a class="call-btn" href="tel:0533785331">اتصال مباشر</a>
+</div>
 </section>
 
 <section class="services">
@@ -92,18 +113,34 @@ Carmel للتأمين
 <div class="service">🚗 تأمين سيارات</div>
 <div class="service">🏥 تأمين صحي</div>
 <div class="service">❤️ تأمين حياة</div>
-<div class="service">💼 تأمين أعمال</div>
-<div class="service">📊 فحص קופות גמל</div>
-<div class="service">🔄 نقل بين الصناديق</div>
+<div class="service">📊 קופות גמל - فحص ومقارنة</div>
+<div class="service">🔄 نقل בין קופות</div>
 <div class="service">💰 فحص الأتعاب والتوفيرات</div>
 
 </section>
 
-<a class="whatsapp" href="https://wa.me/972533785331">✆</a>
+<section class="form">
+
+<h2>طلب استشارة</h2>
+
+<input type="text" placeholder="الاسم">
+
+<input type="tel" placeholder="رقم الهاتف">
+
+<select>
+<option>نوع الخدمة</option>
+<option>تأمين</option>
+<option>קופות גמל</option>
+<option>استشارة عامة</option>
+</select>
+
+<button class="submit-btn" onclick="sendForm()">إرسال</button>
+
+</section>
 
 <script>
-function goWhats(){
-  window.open("https://wa.me/972533785331?text=مرحبا، أريد استشارة تأمين و קופות גמל");
+function sendForm() {
+  alert("تم إرسال الطلب! سيتم التواصل معك قريباً");
 }
 </script>
 
