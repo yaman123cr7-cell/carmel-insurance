@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Carmel للتأمين</title>
 
 <style>
@@ -63,6 +64,7 @@ header {
   padding: 15px;
   margin: 10px 0;
   border-radius: 10px;
+  font-size: 16px;
 }
 
 .form {
@@ -100,10 +102,10 @@ Carmel للتأمين | ביטוח Carmel
 
 <section class="hero">
 <h1>خدمات التأمين و קופות גמל</h1>
-<p>استشارة مهنية بالعربي لمساعدتك تختار الأفضل حسب وضعك وعمرك</p>
+<p>نساعدك تختار أفضل تأمين وكופות גמל حسب وضعك وعمرك مع شرح واضح وخدمة بالعربي</p>
 
 <div class="buttons">
-<a class="whatsapp-btn" href="https://wa.me/972533785331">واتساب</a>
+<a class="whatsapp-btn" href="https://wa.me/972533785331?text=مرحبا، أريد استشارة بخصوص التأمين أو קופות גמל من موقع Carmel">واتساب</a>
 <a class="call-btn" href="tel:0533785331">اتصال مباشر</a>
 </div>
 </section>
@@ -124,7 +126,6 @@ Carmel للتأمين | ביטוח Carmel
 <h2>طلب استشارة</h2>
 
 <input type="text" placeholder="الاسم">
-
 <input type="tel" placeholder="رقم الهاتف">
 
 <select>
@@ -137,6 +138,25 @@ Carmel للتأمين | ביטוח Carmel
 <button class="submit-btn" onclick="sendForm()">إرسال</button>
 
 </section>
+
+<!-- زر واتساب عائم -->
+<a href="https://wa.me/972533785331?text=مرحبا، أريد استشارة" style="
+position:fixed;
+bottom:20px;
+left:20px;
+background:#25d366;
+color:white;
+width:60px;
+height:60px;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:24px;
+text-decoration:none;
+box-shadow:0 0 10px rgba(0,0,0,0.3);
+z-index:999;
+">✆</a>
 
 <script>
 function sendForm() {
