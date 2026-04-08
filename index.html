@@ -6,8 +6,6 @@
 
 <title>محمود شاهين - وكيل تأمين וקופות גמל في إسرائيل</title>
 
-<meta name="description" content="خدمات تأمين صحي، קופות גמל، فحص الأتعاب، نقل بين الصناديق، واستشارة بالعربي في إسرائيل.">
-
 <style>
 body {
   margin: 0;
@@ -15,7 +13,6 @@ body {
   background: #f7f9fc;
 }
 
-/* Header */
 header {
   background: #0f172a;
   color: white;
@@ -23,17 +20,6 @@ header {
   text-align: center;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 22px;
-}
-
-header p {
-  margin: 5px 0 0;
-  font-size: 14px;
-}
-
-/* Hero */
 .hero {
   background: linear-gradient(135deg,#0f172a,#1e293b);
   color: white;
@@ -41,31 +27,14 @@ header p {
   padding: 60px 20px;
 }
 
-/* الصورة */
 .hero img {
   width: 200px;
   border-radius: 50%;
   margin-bottom: 20px;
   border: 5px solid white;
-  box-shadow: 0 0 25px rgba(255,255,255,0.3),
-              0 10px 25px rgba(0,0,0,0.4);
-  transition: transform 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
 }
 
-.hero img:hover {
-  transform: scale(1.05);
-}
-
-.hero h2 {
-  margin: 10px 0;
-  font-size: 22px;
-}
-
-.hero p {
-  font-size: 15px;
-}
-
-/* الأزرار */
 .buttons a {
   display: inline-block;
   margin: 8px;
@@ -76,70 +45,24 @@ header p {
   font-weight: bold;
 }
 
-.whatsapp-btn {
-  background: #25d366;
-}
+.whatsapp-btn { background:#25d366; }
+.call-btn { background:#2563eb; }
 
-.call-btn {
-  background: #2563eb;
-}
-
-/* الخدمات */
-.services {
-  padding: 20px;
-}
+.services { padding:20px; }
 
 .service {
-  background: white;
-  padding: 15px;
-  margin: 10px 0;
-  border-radius: 10px;
-  font-size: 16px;
+  background:white;
+  padding:15px;
+  margin:10px 0;
+  border-radius:10px;
+  cursor:pointer;
 }
 
-/* الفورم */
-.form {
-  padding: 20px;
-  background: #fff;
-  margin: 20px;
-  border-radius: 10px;
-}
-
-input, select {
-  width: 100%;
-  padding: 12px;
-  margin-top: 10px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-}
-
-.submit-btn {
-  background: #0f172a;
-  color: white;
-  margin-top: 15px;
-  border: none;
-  padding: 12px;
-  width: 100%;
-  border-radius: 8px;
-}
-
-/* زر واتساب عائم */
-.whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-  background: #25d366;
-  color: white;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  font-size:24px;
-  text-decoration:none;
-  box-shadow:0 0 10px rgba(0,0,0,0.3);
-  z-index:999;
+.description {
+  display:none;
+  margin-top:10px;
+  font-size:14px;
+  color:#333;
 }
 </style>
 </head>
@@ -147,7 +70,7 @@ input, select {
 <body>
 
 <header>
-<h1>محمود شاهين</h1>
+<h2>محمود شاهين</h2>
 <p>وكيل تأمين، مخطط ضرائب وتقاعد</p>
 </header>
 
@@ -155,52 +78,70 @@ input, select {
 
 <img src="https://i.postimg.cc/J0JqBzxM/file-00000000e6247246b5cc3ecd858d96c6.png">
 
-<h2>خدمات التأمين ו קופות גמל</h2>
+<h2>خدمات التأمين و קופות גמל</h2>
 
-<p>
-نساعدك تختار أفضل تأمين וקופות גמל حسب وضعك وعمرك مع شرح واضح وخدمة بالعربي
-</p>
+<p>شرح واضح + اختيار مناسب + توجيه حسب وضعك</p>
 
 <div class="buttons">
-<a class="whatsapp-btn" href="https://wa.me/972533785331?text=مرحبا، وصلت من موقع محمود شاهين وأريد استشارة بخصوص التأمين أو קופות גמל">واتساب</a>
-<a class="call-btn" href="tel:0533785331">اتصال مباشر</a>
+<a class="whatsapp-btn" href="https://wa.me/972533785331">واتساب</a>
+<a class="call-btn" href="tel:0533785331">اتصال</a>
 </div>
 
 </section>
 
 <section class="services">
 
-<div class="service">🏥 تأمين صحي</div>
-<div class="service">❤️ تأمين حياة</div>
-<div class="service">📊 קופות גמל - فحص ومقارنة</div>
-<div class="service">🔄 نقل بين קופות</div>
-<div class="service">💰 فحص الأتعاب والتوفيرات</div>
+<div class="service" onclick="toggle(this)">
+🏥 تأمين صحي
+<div class="description">
+التأمين الصحي يعطيك تغطية للعلاجات، العمليات، والأدوية الخاصة.  
+الخطأ الشائع: الناس تختار أرخص تأمين بدون فهم التغطية.  
+النصيحة: اختار حسب وضعك الصحي وليس السعر فقط.
+</div>
+</div>
+
+<div class="service" onclick="toggle(this)">
+❤️ تأمين حياة
+<div class="description">
+تأمين الحياة يحمي عائلتك في حال لا سمح الله صار شيء.  
+الخطأ: عدم وجود تأمين أو مبلغ غير كافي.  
+النصيحة: لازم يغطي التزاماتك (قروض + عائلة).
+</div>
+</div>
+
+<div class="service" onclick="toggle(this)">
+📊 קופות גמל
+<div class="description">
+קופות גמל هي توفیر طويل الأمد مهم للمستقبل والتقاعد.  
+الخطأ: ترك ال קופה بدون متابعة أو اختيار مسار غير مناسب.  
+النصيحة: افحص المسار والرسوم بشكل دوري.
+</div>
+</div>
+
+<div class="service" onclick="toggle(this)">
+🔄 نقل بين קופות
+<div class="description">
+ممكن تنقل ال קופה لشركة أفضل.  
+الخطأ: البقاء في קופה برسوم عالية.  
+النصيحة: قارن الأداء + الرسوم قبل النقل.
+</div>
+</div>
+
+<div class="service" onclick="toggle(this)">
+💰 فحص الأتعاب والتوفيرات
+<div class="description">
+الأتعاب (דמי ניהול) تأثر كثير على التوفير.  
+الخطأ: تجاهل الرسوم.  
+النصيحة: حتى فرق بسيط يوفر آلاف الشواكل.
+</div>
+</div>
 
 </section>
-
-<section class="form">
-
-<h2>طلب استشارة</h2>
-
-<input type="text" placeholder="الاسم">
-<input type="tel" placeholder="رقم الهاتف">
-
-<select>
-<option>نوع الخدمة</option>
-<option>تأمين</option>
-<option>קופות גמל</option>
-<option>استشارة عامة</option>
-</select>
-
-<button class="submit-btn" onclick="sendForm()">إرسال</button>
-
-</section>
-
-<a class="whatsapp-float" href="https://wa.me/972533785331?text=مرحبا، أريد استشارة">✆</a>
 
 <script>
-function sendForm() {
-  alert("تم إرسال الطلب! سيتم التواصل معك قريباً");
+function toggle(element){
+  let desc = element.querySelector(".description");
+  desc.style.display = desc.style.display === "block" ? "none" : "block";
 }
 </script>
 
